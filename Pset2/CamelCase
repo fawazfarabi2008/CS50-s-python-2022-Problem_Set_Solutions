@@ -1,0 +1,14 @@
+#Loop and conditional practice!!!
+
+camel_case = input("camelCase: ") #Basic intro
+
+snake_case = "" #The variable has been kept empty because we will be adding to it
+
+for letter in camel_case:
+    if letter.isupper(): #checking for capitalized letters
+        snake_case += "_" + letter.lower() #adding the "_" before the uppercase and making the next word start with a lowercase letter
+    else:
+        snake_case += letter
+
+#Basic outro
+print("snake_case: ", snake_case)
