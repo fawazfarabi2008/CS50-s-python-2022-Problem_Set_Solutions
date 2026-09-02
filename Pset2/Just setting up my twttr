@@ -1,0 +1,11 @@
+#Loop function and conditional practice!!!
+
+text = input("Input: ") # Basic intro
+
+result = ""
+
+for letter in text:
+    if letter not in "aeiou" and letter not in "AEIOU": # Ommitting vowels 
+        result += letter
+
+print("Output:", result) # Basic outro
