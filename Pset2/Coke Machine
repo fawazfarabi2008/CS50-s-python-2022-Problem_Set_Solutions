@@ -1,0 +1,25 @@
+#Loop function practice!!!
+
+#Basic intro
+print("Welcome to the vending machine! cost is 50 cents.")
+inserted_coin = int(input("Insert coin: ")) #Creating a veriable for counting the inserted coins
+
+while inserted_coin != 25 and inserted_coin != 10 and inserted_coin != 5: #Just in case if the user doesn't input the correct cents
+    inserted_coin = int(input("Insert coin: "))
+
+while inserted_coin == 25 or inserted_coin == 10 or inserted_coin == 5:
+    total = inserted_coin #Another variable was created to keep count of the total amount of coins
+    while total < 50:
+        print(f"Total inserted: {total} cents.")
+        inserted_coin = int(input("Insert coin: ")) 
+        if inserted_coin == 25 or inserted_coin == 10 or inserted_coin == 5:
+            total += inserted_coin #Adding the inserted coins to the total inserted
+#Basic outro
+    print(f"Total inserted: {total} cents.")
+    if total >50:
+        print(f"Your change is {total - 50} cents.")
+    print("Thank you for your purchase!")
+    exit()
+
+#Note: the code could have been done more simply, but I wanted to use while functions for better practice. Thank you
+
