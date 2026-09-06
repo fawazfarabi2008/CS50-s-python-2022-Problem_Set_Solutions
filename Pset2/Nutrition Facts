@@ -1,0 +1,29 @@
+item = {
+    "apple": 130,
+    "banana": 110,
+    "cantaloupe": 50,
+    "avocado": 50,
+    "grapefruit": 60,
+    "grapes": 90,
+    "honeydew melon": 50,
+    "kiwifruit": 90,
+    "lemon": 15,
+    "lime": 20,
+    "nectarine": 60,
+    "orange": 80,
+    "peach": 60,
+    "pear": 100,
+    "pineapple": 50,
+    "plums": 70,
+    "strawberries": 50,
+    "tangerine": 50,
+    "watermelon": 80,
+    "sweet cherries": 100
+}
+
+name = input("Item: ")
+
+if name in item:
+    print(f"{name} has {item[name]} calories.")
+else:
+    print("Item not found.")
