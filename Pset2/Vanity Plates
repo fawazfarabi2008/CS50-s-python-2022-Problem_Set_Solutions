@@ -1,0 +1,35 @@
+
+def main():
+    plate = input("Plate: ")
+    if is_valid(plate):
+        print("Valid")
+    else:
+        print("Invalid")
+
+
+def is_valid(s):
+    if len(s) < 2 or len(s) > 6: # Must be 2 to 6 characters
+        return False
+
+    if not s[0].isalpha() or not s[1].isalpha(): # Must start with at least 2 letters
+        return False
+
+    
+    if not s.isalnum(): # Only letters and numbers
+        return False
+
+    for i in range(len(s)): # Numbers must only appear at the end
+        if s[i].isdigit():
+            if s[i] == "0": # First number cannot be 0
+                return False
+
+            if not s[i:].isdigit(): # Everything after the first number must be numbers
+                return False
+            
+            break
+
+    return True
+
+
+main()
+
