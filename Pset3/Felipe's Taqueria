@@ -1,0 +1,25 @@
+#The main list
+menu = {
+    "Baja Taco": 4.25,
+    "Burrito": 7.50,
+    "Bowl": 8.50,
+    "Nachos": 11.00,
+    "Quesadilla": 8.50,
+    "Super Burrito": 8.50,
+    "Super Quesadilla": 9.50,
+    "Taco": 3.00,
+    "Tortilla Salad": 8.00
+}
+
+total = 0 #Initial total is 0
+
+while True:
+    try:
+        item = input("Item: ").title() #Taking user input
+    except EOFError: # avoiding this error according to the question
+        print()
+        break
+
+    if item in menu: #checking if the inputted item is in menu
+        total += menu[item] #add the "key" of menu into total
+        print(f"Total: ${total:.2f}")
