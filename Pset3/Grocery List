@@ -1,0 +1,20 @@
+grocery = {} #Initial empty list
+
+while True: #Condition given to prompt the user repeatedly
+    try:
+        item = input("What your item? ").lower()
+    except EOFError:
+        print()
+        break
+
+    if item in grocery: #If the inputted item is in the list, add 1 on the right
+        grocery[item] += 1
+    else: #If the inputted item isn't in the list, just have 1 on the right
+        grocery[item] = 1
+
+for item in sorted(grocery): #Sorting the list in alphabitical order
+    print(grocery[item], item.upper()) #Making the items upper case
+
+
+#Note: If you're using VScode, control+z (then hit enter) will end the input prompt and display the result 
+#Else: just use control+d (then hit enter)
